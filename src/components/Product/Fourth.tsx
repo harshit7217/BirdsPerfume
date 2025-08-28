@@ -21,7 +21,10 @@ type Watch = {
 
 function Fourth() {
   const location = useLocation();
-  const isNestedRoute = location.pathname !== '/fourth';
+  let isNestedRoute = location.pathname !== '/fourth'; 
+  if(isNestedRoute) {
+    isNestedRoute = location.pathname !== '/products/fourth';
+  }
 
   return (
     <div data-aos='fade-up' className='bg-gray-50'>

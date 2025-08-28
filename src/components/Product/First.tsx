@@ -21,7 +21,11 @@ type Watch = {
 
 function First() {
   const location = useLocation();
-  const isNestedRoute = location.pathname !== '/first'; 
+  let isNestedRoute = location.pathname !== '/first'; 
+  if(isNestedRoute) {
+    isNestedRoute = location.pathname !== '/products/first';
+  }
+  
   
   return (
     <div data-aos='fade-up' className='bg-gray-50'>

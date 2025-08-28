@@ -21,8 +21,11 @@ type Watch = {
 
 function Third() {
   const location = useLocation();
-  const isNestedRoute = location.pathname !== '/third';
-  
+  let isNestedRoute = location.pathname !== '/third'; 
+  if(isNestedRoute) {
+    isNestedRoute = location.pathname !== '/products/third';
+  }
+
   return (
     <div data-aos='fade-up' className='bg-gray-50'>
         {disWatchData.map((watch: Watch) => (
