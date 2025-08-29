@@ -3,6 +3,7 @@ import { discoverMore as disWatchData } from "../data/DiscoverMoreData.ts"
 import { FaStar } from 'react-icons/fa';
 import 'aos/dist/aos.css'
 import { Link, useLocation } from 'react-router-dom';
+import { CiShare2 } from 'react-icons/ci';
 
 type Watch = {
   link: string;
@@ -36,6 +37,18 @@ function Third() {
     return () => window.removeEventListener('resize', handleResize);
   }, [width])
 
+  const handleShareClick = () => {
+    navigator.clipboard.writeText(location.pathname)
+      .then(() => {
+        alert('Path copied to clipboard:');
+        // Optional: Trigger animation or toast here
+      })
+      .catch(() => {
+        alert('Failed to copy path:');
+      });
+  };
+
+
 
   return (
     <div data-aos='fade-up' className='bg-gray-50'>
@@ -46,6 +59,7 @@ function Third() {
               <div>
                 <div key={watch.id} className='flex w-[100%] h-[90vh] justify-around items-center'>
                   <img src={watch.image} alt="Perfume Image" className='w-[40%] border-2 border-gray-400 shadow-xl' />
+                  <div className='cursor-pointer items-start h-[90vh] '><button onClick={handleShareClick} className='cursor-pointer p-0 m-0 '><CiShare2 className='w-10 h-10' /></button></div>
                   <div className='flex flex-col justify-start items-start gap-10 w-[30%] h-[90vh] pt-20'>
                     <p className='text-3xl text-gray-500 font-bold'>{watch.title}</p>
                     <p className='text-lg text-gray-400 '><b className='text-3xl text-gray-900'>Size:</b> {watch.quantity}</p>
@@ -74,6 +88,7 @@ function Third() {
               width > 750 ? (
                 <div>
                   <div key={watch.id} className='flex flex-col w-[100%] justify-around items-center'>
+                    <div className='cursor-pointer flex justify-end w-[100%] items-start'><button onClick={handleShareClick} className='cursor-pointer p-0 m-0 '><CiShare2 className='w-10 h-10' /></button></div>
                     <img src={watch.image} alt="Perfume Image" className='w-[70%] border-2 border-gray-400 shadow-xl' />
                     <div className='flex flex-col justify-start items-start gap-10 h-[90vh] pt-20'>
                       <p className='text-3xl text-gray-500 font-bold'>{watch.title}</p>
@@ -102,6 +117,7 @@ function Third() {
               ) : (
                 <div>
                   <div key={watch.id} className='flex flex-col w-[100%] justify-around items-center'>
+                    <div className='cursor-pointer flex justify-end w-[100%] items-start'><button onClick={handleShareClick} className='cursor-pointer p-0 m-0 '><CiShare2 className='w-10 h-10' /></button></div>
                     <img src={watch.image} alt="Perfume Image" className='w-[100%]p-2 border-2 border-gray-400 shadow-xl' />
                     <div className='flex flex-col justify-start items-start gap-10 h-[90vh] pt-20 pl-3'>
                       <p className='text-3xl text-gray-500 font-bold'>{watch.title}</p>
