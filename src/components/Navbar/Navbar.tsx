@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { CiMenuBurger } from 'react-icons/ci'
 import { FaHome } from 'react-icons/fa'
 import { MdOutlineProductionQuantityLimits } from 'react-icons/md'

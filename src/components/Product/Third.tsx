@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { discoverMore as disWatchData } from "../data/DiscoverMoreData.ts"
 import { FaStar } from 'react-icons/fa';
 import 'aos/dist/aos.css'

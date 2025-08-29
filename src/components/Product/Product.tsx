@@ -1,4 +1,3 @@
-import React from 'react'
 import { discoverMore as disWatchData } from "../data/DiscoverMoreData.ts"
 import { Link, Outlet, useLocation } from 'react-router-dom'
 import 'aos/dist/aos.css'
