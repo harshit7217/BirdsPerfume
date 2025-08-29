@@ -55,7 +55,7 @@ function Second() {
                     </div>
                     <p className='flex gap-5 text-2xl text-gray-500 ' ><b className='text-3xl text-gray-700'>Price : </b>{watch.price}</p>
                     <p className='flex gap-5 items-center text-xl text-gray-500 '><b className='text-3xl text-gray-700'>Discount :</b> {watch.discount}</p>
-                    <button className="border-2 p-1 w-60 border-gray-700 text-xl text-gray-500 font-bold">Add to Cart</button>
+                    <div className="border-2 p-1 w-60 border-gray-700 text-xl text-gray-500 font-bold  cursor-pointer hover:text-pink-300 hover:border-gray-500 rounded text-center">Add to Cart</div>
                   </div>
                 </div>
                 <div className='px-20 py-5'>
@@ -84,7 +84,7 @@ function Second() {
                       </div>
                       <p className='flex gap-5 text-2xl text-gray-500 ' ><b className='text-3xl text-gray-700'>Price : </b>{watch.price}</p>
                       <p className='flex gap-5 items-center text-xl text-gray-500 '><b className='text-3xl text-gray-700'>Discount :</b> {watch.discount}</p>
-                      <button className="border-2 p-1 w-60 border-gray-700 text-xl text-gray-500 font-bold">Add to Cart</button>
+                      <div className="border-2 p-1 w-60 border-gray-700 text-xl text-gray-500 font-bold  cursor-pointer hover:text-pink-300 hover:border-gray-500 rounded text-center">Add to Cart</div>
                     </div>
                   </div>
                   <div className='px-20 py-5'>
@@ -112,7 +112,7 @@ function Second() {
                       </div>
                       <p className='flex gap-5 text-2xl text-gray-500 ' ><b className='text-3xl text-gray-700'>Price : </b>{watch.price}</p>
                       <p className='flex gap-5 items-center text-xl text-gray-500 '><b className='text-3xl text-gray-700'>Discount :</b> {watch.discount}</p>
-                      <button className="border-2 p-1 w-60 border-gray-700 text-xl text-gray-500 font-bold">Add to Cart</button>
+                      <div className="border-2 p-1 w-60 border-gray-700 text-xl text-gray-500 font-bold  cursor-pointer hover:text-pink-300 hover:border-gray-500 rounded text-center">Add to Cart</div>
                     </div>
                   </div>
                   <div className='p-1 mt-[-60px]'>
@@ -140,19 +140,19 @@ function Second() {
           watch.id != 2 ? (
             <Link
               to={watch.link}
-              className="flex flex-col justify-center w-[240px] items-center ml-10 mr-10 border-2 border-gray-300 shadow-xl pb-3"
+              className="flex flex-col justify-center w-[240px] items-center ml-10 mr-10 border-2 border-gray-300 shadow-xl p-1 rounded hover:border-gray-500"
               key={watch.title}
             >
               <img
                 src={watch.image}
                 alt={watch.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-cover rounded"
               />
               <p className="text-blue-300 font-bold">{watch.type}</p>
               <p className="text-center text-sm">{watch.title}</p>
               <p className="text-center text-gray-500 text-sm">{watch.description}</p>
               <p className="p-2">{watch.price}</p>
-              <button className="border-2 p-1 border-gray-500 text-sm text-black font-bold">Add to Cart</button>
+              <div className="border-2 p-1 border-white text-sm text-black font-bold cursor-pointer hover:text-pink-300 hover:border-gray-500 rounded">Add to Cart</div>
             </Link>
           ) : null
         ))}

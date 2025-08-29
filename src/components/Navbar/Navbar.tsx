@@ -24,10 +24,10 @@ function Navbar(props: Props) {
                     </div>
                     <div className='flex gap-20 pr-[10%]'>
 
-                        <Link to='' className='flex items-center gap-1 text-3xl font-serif text-gray-500'>
+                        <Link to='' className='flex items-center gap-1 text-3xl font-serif text-gray-500 hover:text-pink-300'>
                             <FaHome /> Home
                         </Link>
-                        <Link to='products' className='flex items-center gap-1 text-3xl font-serif text-gray-500'>
+                        <Link to='products' className='flex items-center gap-1 text-3xl font-serif text-gray-500 hover:text-pink-300'>
                             <MdOutlineProductionQuantityLimits /> Products
                         </Link>
                     </div>
