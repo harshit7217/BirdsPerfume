@@ -7,16 +7,17 @@ function Layout() {
   const [width, setWidth] = useState<number>(window.innerWidth);
   useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth);
-  window.addEventListener('resize', handleResize);
+    console.log(width)
+    window.addEventListener('resize', handleResize);
 
-  // Cleanup on unmount
-  return () => window.removeEventListener('resize', handleResize);
+    // Cleanup on unmount
+    return () => window.removeEventListener('resize', handleResize);
   }, [width])
   return (
     <div>
-        <Navbar size={width}/>
-        <Outlet/>
-        <Footer/>
+      <Navbar size={width} />
+      <Outlet />
+      <Footer />
     </div>
   )
 }
